@@ -1,0 +1,20 @@
+const students = [
+  {
+    name: "Najat",
+    fav_movies: ["Dear John", "A Beauiful mind"],
+  },
+  {
+    name: "Fatma",
+    fav_movies: ["Top Gun 1", "Top Gun 2"],
+  },
+];
+
+const favMovieslogger = (students) =>
+  students.forEach((i) => console.log(i.fav_movies));
+
+favMovieslogger(students);
+
+const favMoviesArray = (students) => {
+  return students.filter((i) => i.fav_movies.filter((j) => j));
+};
+favMoviesArray(students);
