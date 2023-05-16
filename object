@@ -18,3 +18,29 @@ const favMoviesArray = (students) => {
   return students.filter((i) => i.fav_movies.filter((j) => j));
 };
 favMoviesArray(students);
+
+let array = [
+  { name: "Turki", age: 25, height: 174 },
+
+  { name: "Turki", age: 25, height: 174 },
+
+  { name: "Turki", age: 25, height: 174 },
+];
+
+let newA = array.map((i) => {
+  name: i.name;
+});
+let newB = array.map(function (i) {
+  let obj = { name: i.name, age: i.age };
+  return obj;
+});
+console.log(newB);
+
+let objj = {
+  phones: [{ name: "House" }],
+};
+
+const { name, email } = fatmaAccount;
+console.log(name);
+
+objj.phones.map((i) => `${i.name}`);
