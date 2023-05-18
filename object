@@ -40,7 +40,81 @@ let objj = {
   phones: [{ name: "House" }],
 };
 
-const { name, email } = fatmaAccount;
-console.log(name);
+//const { name, email } = fatmaAccount;
+//console.log(name);
 
-objj.phones.map((i) => `${i.name}`);
+//objj.phones.map((i) => `${i.name}`);
+
+/// classes
+
+class Instructor {
+  //properties
+  name = "Hmoud";
+  character = "Mysterious";
+  interests = ["Python", "Watching movies", "Boxing"];
+  // methods
+  constructor(name, character) {
+    this.name;
+    this.character;
+  }
+  name(params) {
+    return;
+  }
+
+  addingInterest = (interest) => {
+    if (interest !== this.interests.find((i) => i == interest)) {
+      this.interests.push(interest);
+    } else {
+      console.log("It is in the array");
+    }
+  };
+}
+
+const instructor1 = new Instructor();
+
+console.log(instructor1.name);
+instructor1.addingInterest("JS");
+console.log(instructor1.interests);
+
+class Parents {
+  numberOfParents = 2;
+  constructor(fatherName = "R", motherName = "H", address) {
+    this.fatherName = fatherName;
+    this.motherName = motherName;
+    this.address = address;
+  }
+}
+
+class Student extends Parents {
+  age = 15; //will not get executed hence the constructor's age will rewrite it
+  constructor(name, classNum, subj = "math", age = 15, fatherName, motherName) {
+    super(fatherName, motherName);
+    this.name = name;
+    this.classNum = classNum;
+    this.subj = subj;
+    this.age = age;
+  }
+
+  static findStudent() {
+    let i = 6;
+    return i;
+  }
+}
+
+let Ahemd = new Student("Turki", "A", "physics", "D", "L");
+console.log(Ahemd);
+console.log(Student.findStudent());
+let a = [1, 2, 3, 4, 5];
+a.reduce((i, j) => i + j, 0);
+console.log(
+  "here is filter: ",
+  a.filter((i) => i > 2)
+);
+console.log(
+  "here is find: ",
+  a.find((i) => i > 2)
+);
+let arra = ["jhwebfkj", "kuewfhbku"];
+
+arra = arra.concat(["khjwbekj", "hjbdhjb"]);
+console.log(arra);
